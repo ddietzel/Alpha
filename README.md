@@ -1,7 +1,7 @@
 # alpha
 Alpha Projects / Personal Projects
 
-Links:
+Links:<br>
 <a href="http://alpha.danieldietzel.com/LFL/index.html">Left Field Labs Demo</a><br>
 <a href="http://alpha.danieldietzel.com/Tesla/index.html">Tesla Demo 1</a><br>
 <a href="http://alpha.danieldietzel.com/TeslaESL/index.html">Tesla Demo 2</a><br>
