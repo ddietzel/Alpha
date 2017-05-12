@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('http://orig14.deviantart.net/07ba/f/2015/360/e/b/twitch_tv_wallpaper_by_atroxcze-d9lin3x.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+#download {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	color: white;
+	font: 12px Arial;
+	background: rgba(0,0,0,.5);
+	padding: 15px;
+	text-align: center;
+	z-index: 1;
+}
+
+#stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+#stage.has-been-loaded-once {
+  display: block;
+  padding-bottom: 50px;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  background: rgba(255,255,255,.75);
+  box-shadow: 1px 1px 10px #000;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 1px solid black;
+  position: relative;
+  min-width: 768px;
+  padding: 20px 10px 30px;
+}
+
+.wrapper .header {
+  font: bold 35px Verdana;
+  padding: 10px 0 5px;
+  color: #222;
+  margin: 10px;
+  text-shadow: 1px 1px 1px #ccc;
+  text-align: center;
+}
+
+.search-wrapper {
+  margin: 20px 10% 25px;
+}
+
+.search-wrapper #search-input {
+  width: 80%;
+  padding: 10px;
+  margin: 0;
+  background: rgba(255,255,255,.75);
+  box-shadow: 1px 1px 5px #999 inset;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  font: 25px Helvetica;
+  color: black;
+}
+
+.search-wrapper #search-submit {
+  width: 19%;
+  margin: 0;
+  padding: 10px;
+  background: rgba(79,69,95,1);
+  box-shadow: 1px 1px 5px #999;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  color: white;
+  font: 25px Helvetica;
+  cursor: pointer;
+}
+
+.search-wrapper #search-submit:hover {
+  background: rgba(129, 119, 145, 1);
+  color: white;
+}
+
+#previous-page, #next-page {
+  width: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#previous-page:hover, #next-page:hover {
+  opacity: .5;
+}
+
+#results-container {
+  padding: 10px;
+  border-top: 1px solid black;
+  position: relative;
+  padding-top: 25px;
+  display: none;
+}
+
+#stage.loading #results-container, #stage.loaded #results-container {
+  display: block;
+}
+
+
+#results-container #loading-gif {
+  margin: 0 auto;
+  width: 50%;
+  padding: 100px;
+  display: none;
+}
+
+#stage.loading #results-container #loading-gif {
+  display: block;
+}
+
+#results-container .total-results {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font: bold 14px Helvetica;
+  display: none;
+}
+
+#stage.loaded #results-container .total-results {
+  display: block;
+}
+
+#results-container .pagination {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font: bold 14px Helvetica;
+  display: none;
+}
+
+#stage.loaded #results-container .pagination {
+  display: block;
+}
+
+.stream {
+  height: 150px;
+  margin: 10px 0px;
+  padding: 10px;
+  background: rgba(255,255,255,.5);
+}
+
+.stream .stream-image {
+  height: 130px;
+  width: 130px;
+  box-shadow: 1px 1px 3px #ccc;
+  float: left;
+  background-position: center;
+  background-size: cover;
+}
+
+.stream .stream-name {
+  margin: 10px 0px 5px 150px;
+  display: block;
+  font: bold 26px Helvetica;
+}
+
+.stream .stream-details {
+  margin: 5px 0 0 150px;
+  font: 16px Helvetica;
+}
+
+.stream .stream-description {
+  margin: 5px 0 0 150px;
+  font: 16px Helvetica;
+  padding-right: 10%;
+}

@@ -1,0 +1,27 @@
+<!-- single feed of public chat, external content such as official Twitter posts, and crowd activity all threaded together. When there's a poll, it flows through as a sticky chat, etc. The goal is to consolidate the UX into a single interface, rather than making the user click around to different tabs.
+
+This would be pure prototype, like the earlier crowd visualizations you did. But again, we're looking for something that incorporates the crowd, chat, official tweets, polls, and other types of content flowing through a single interface in some way.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+    <title>Swivel Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="chatContainer" class="chatContainer flip-container">
+        <div class="flipper">
+            <div class="front" id="chatReceiver">
+            </div>
+
+            <div class="back">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

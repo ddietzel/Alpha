@@ -1,0 +1,42 @@
+<!--
+Rules:
+- Write a simple web app that hits the Twitch API URL shown at the top (there are API docs online)
+- Use JSONP when utilizing the Twitch API's
+- Build the URL based on the query entered by the user in the search box shown in the mock
+- Build out the list as shown in the mock. 
+- All UI elements are mandatory and self-explanatory
+- Feel free to add more/better UI, as long as you include the mandatory elements
+- No frameworks like jQuery/AngularJS, please use vanilla JS to implement UX, hit the API and render content
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daniel's Awesome Twitch App</title>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/classNames.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">  
+</head>
+<body>
+  <a href="twitch.zip" id="download">Download me as a .zip</a>
+  <div id="stage">
+    <div class="wrapper">
+      <h1 class="header">Daniel's Awesome Twitch App</h1>
+      <form class="search-wrapper" onsubmit="search(); return false;">
+        <input id="search-input" type="search" placeholder="Find a stream...">
+        <input id="search-submit" type="submit" value="Search">
+      </form>
+      <div id="results-container">
+        <div class="total-results">Total Results: <span id="results-count"></span></div>
+        <div class="pagination">
+          <img id="previous-page" src="assets/left-arrow.png">
+            <span id="page-number"></span>/<span id="total-pages"></span>
+          <img id="next-page" src="assets/right-arrow.png">
+        </div>
+        <img id="loading-gif" src="assets/loading.gif">
+        <div id="search-results"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

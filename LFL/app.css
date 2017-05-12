@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:500);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+}
+
+#stage {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: 0;
+  box-shadow: 0px 0px 200px #ccc inset;
+  background-image: url('lfl.png');
+  background-size: 50px;
+  background-position: top 10px left 20px;
+  background-repeat: no-repeat;
+}
+
+a#downloadZip {
+  color: #666;
+  text-decoration: none;
+  font: 700 12px 'Montserrat', Helvetica, sans-serif;
+  position: absolute;
+  top: 55px;
+  left: 10px;
+}
+ a#downloadZip:visited {
+   color: #666;
+ }
+
+a#downloadZip:hover {
+  color: #000;
+}
+
+.headerBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 120px;
+}
+
+.headerBox .header {
+  font: 700 50px 'Montserrat', Helvetica, sans-serif;
+  text-shadow: 2px 2px 3px #999;
+  text-align: center;
+  white-space: nowrap;
+  color: #333;
+  display: block;
+}
+
+.headerBox #newAddress {
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 0px;
+  color: #666;
+  font: 700 14px 'Montserrat', Helvetica, sans-serif;
+  padding: 5px 7px;
+}
+
+.headerBox #submit {
+  padding: 7px 10px;
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  margin-left: 105px;
+  bottom: 0;
+  background:#fafafa;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px rgba(200,200,200.4);
+  font: 500 12px 'Raleway', Helvetica, sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.headerBox #reset {
+  padding: 7px 10px;
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  margin-left: -155px;
+  bottom: 0;
+  background:#333;
+  color: white;
+  border: 1px solid #aaa;
+  box-shadow: 1px 1px 2px rgba(200,200,200.4);
+  font: 500 12px 'Raleway', Helvetica, sans-serif;
+  cursor: pointer;
+  text-align: center;
+}
+
+.locationItem {
+  -webkit-transition: all ease-in-out 300ms;
+  -moz-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.locationItem .address {
+  color: white;
+  font: 700 1.5vw 'Montserrat', Helvetica, sans-serif;
+  text-shadow: 1px 1px 2px rgba(50,50,50,.5);
+  text-align: center; 
+  display: block;
+  height: 50%;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  line-height: 1.6vw;
+}
+
+.locationItem .distance {
+  color: white;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  font: 500 1vw 'Raleway', Helvetica, sans-serif;
+}
+
+.locationItem.textOnTop {
+  overflow: visible;
+}
+
+.locationItem.textOnTop .address {
+  position: absolute;
+  top: -135px;
+  overflow: visible;
+  color: #333;
+}
+
+.locationItem.textOnTop .distance {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  text-align: center;
+  overflow: visible;
+  color: #333;
+  text-shadow: 1px 1px 2px #666;
+}
+
+.locationItem.textOnTop .distance.kilometers {
+  position: absolute;
+  top: -25px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .headerBox {
+    height: 120px;
+  }
+  .headerBox .header {
+    font-size: 5vw;
+  }
+
+  .locaitonItem.address {
+    font-size: 3vw;
+  }
+  .locaitonItem.distance {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerBox {
+    height: 80px;
+  }
+  .headerBox .header {
+    font-size: 4vw;
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+  
+  .headerBox #newAddress {
+    height: 40px;
+  }
+  
+  .headerBox {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 70px;
+    height: 100px;
+  }
+  
+  .headerBox .header {
+    font-size: 36px;
+  }
+  
+  .headerBox #reset {
+    width: 100px !important;
+    margin-left: -205px;
+  }
+  .headerBox #submit {
+    width: 100px !important;
+  }
+  
+}

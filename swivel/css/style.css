@@ -1,0 +1,202 @@
+@import "http://fonts.googleapis.com/css?family=Abel|Oswald:400,700,300|Pontano+Sans";
+
+* {
+	box-sizing:border-box;
+	font-family:Abel,Pontano Sans,Helvetica,sans-serif;
+}
+
+html,body {
+	height:100%;
+	padding:0;
+	margin:0;
+}
+
+body {
+	background:#4c4c4c;
+/* Old browsers */
+	background:-moz-linear-gradient(top,rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 52%,rgba(43,43,43,1) 99%,rgba(19,19,19,1) 100%);
+/* FF3.6+ */
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(76,76,76,1)),color-stop(12%,rgba(89,89,89,1)),color-stop(52%,rgba(17,17,17,1)),color-stop(99%,rgba(43,43,43,1)),color-stop(100%,rgba(19,19,19,1)));
+/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 52%,rgba(43,43,43,1) 99%,rgba(19,19,19,1) 100%);
+/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 52%,rgba(43,43,43,1) 99%,rgba(19,19,19,1) 100%);
+/* Opera 11.10+ */
+	background:-ms-linear-gradient(top,rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 52%,rgba(43,43,43,1) 99%,rgba(19,19,19,1) 100%);
+/* IE10+ */
+	background:linear-gradient(to bottom,rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 52%,rgba(43,43,43,1) 99%,rgba(19,19,19,1) 100%);
+/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c',endColorstr='#131313',GradientType=0);
+/* IE6-9 */
+}
+
+.chatContainer {
+	height:600px;
+	position:absolute;
+	vertical-align:bottom;
+	left:50%;
+	top:50%;
+	margin:-320px 0 0 -160px;
+	width:320px;
+	overflow:scroll;
+	border:1px solid #000;
+	background:url(../img/CrowdSurfing_Hero_Mobile.jpg);
+	background-size:cover;
+	background-position:50% 50%;
+}
+
+.chatItem {
+	width:100%;
+	min-height:50px;
+	padding:10px 8px;
+	border-top:1px solid #000;
+	position:relative;
+	-webkit-transition:all .5s ease-in-out;
+	-moz-transition:all .5s ease-in-out;
+	-o-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+	font-size:13px;
+}
+
+.chat {
+	background:rgba(255,255,255,.85);
+}
+
+.chat .userIcon {
+  width:30px;
+  height:30px;
+  float:left;
+  margin:1px 5px 3px 0px;
+  border-radius:50%;
+}
+
+.tweet {
+	font:13px "Pontano Sans";
+	background:#55ACEE;
+	color:#f5f8fa;
+}
+
+.tweet .twitterIcon {
+  background-image: url(../img/Twitter_logo_white.png);
+  background-size:85% 85%;
+  background-position:50% 50%;
+	min-height:none !important;
+  background-repeat:no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin:1px 5px 3px 2px;
+}
+
+.tweet.sticky {
+	position:absolute;
+	height:45px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	bottom:550px!important;
+	z-index:99999999;
+	box-shadow: 0 4px 4px -4px #000;
+	border-bottom:1px solid #000;
+	border-top:none;
+	background:#292F33;
+	color:#f5f8fa;
+}
+
+.front .toggleFlip {
+  cursor: url(../img/flip.ico), default;
+}
+
+.back .toggleFlip {
+  cursor: url(../img/flipback.ico), default;
+  
+}
+
+.poll {
+	background:#ffd700;
+}
+
+
+
+/* HERE IS WHERE YOU STYLE THE bacKS */
+.back.twitter {
+  background-color:#55ACEE;
+  background-image:url(../img/Twitter_logo_half_white.png);
+  background-size:50% auto;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+}
+
+
+.front {
+	position:absolute!important;
+	bottom:0!important;
+	top:auto!important;
+}
+
+/* BUTTONS FOR CHAT */
+.buttonContainer {
+	position:absolute;
+	height:100px;
+	width:320px;
+	top:50%;
+	margin-top:250px;
+	padding:10px;
+	left:50%;
+	margin-left:-160px;
+	border:1px solid #000;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective:1000px;
+	-webkit-perspective:1000px;
+}
+
+/* flip the pane when parent has flip */
+.flip-container .flipper.flip {
+	transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+}
+
+.flipper,.back {
+	width:100%;
+	height:100%;
+}
+
+.front {
+	width:100%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition:.5s ease-in-out /* cubic-bezier(0.8,0.5,0.8,1) */;
+  transform-style: preserve-3d;
+	-webkit-transition:.5s ease-in-out /* cubic-bezier(0.8,0.5,0.8,1) */;
+  -webkit-transform-style: preserve-3d; /* Chrome, Safari, Opera */
+	position:relative;
+}
+
+/* hide back of pane during swap */
+.front,.back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index:2;
+/* for firefox 31 */
+  -webkit-transform: translate3d(0, 0, 0);
+	transform:rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(180deg);
+	transform:rotateY(180deg);
+}

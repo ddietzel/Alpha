@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>Tesla Options</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/globalStyles.css">
+</head>
+
+<body class="dark">
+  <div id="gradient"></div>
+  <div class="site">
+    <div id="logoContainer" class="magicShadow">
+      <div id="gradientPlate"></div>
+      <div id="logo"></div>
+    </div>
+    <div id="topbar"></div>
+
+    <div id="allOptions"></div>
+
+    <div id="copy"></div>
+  </div> 
+
+
+
+    <!-- this app is small enough to put the template el's on the page -->
+    <script id="optionElement" type="text/template">
+      <ul>
+        <li class="optionInfo name"><%= name %></li>
+        <li>
+          <ul class="costBreakdown">
+            <li><label>Base Price</label><span class="price"><%= base_price %></span></li>
+            <li><label>Inspect Prep Price</label><span class="price"><%= inspect_prep_price %></span></li>
+            <li><label>Personal Delivery Price</label><span class="price"><%= personal_delivery_price %></span></li>
+          </ul>
+        </li>
+        <li class="optionInfo price"><%= formattedPrice %></li>
+      </ul>
+    </script>
+
+
+  <script src="js/libs/jquery.js"></script>
+  <script src="js/libs/underscore.js"></script>
+  <script src="js/libs/backbone.js"></script>
+  <script src="js/models/singleOptionModel.js"></script>
+  <script src="js/models/costModel.js"></script>
+  <script src="js/collections/allCosts.js"></script>
+  <script src="js/views/singleOptionView.js"></script>
+  <script src="js/views/allOptionsView.js"></script>
+  <script src="js/collections/allOptions.js"></script>
+  <script src="js/routes/router.js"></script>
+  <script src="js/App.js"></script>
+
+</body>
+</html>
